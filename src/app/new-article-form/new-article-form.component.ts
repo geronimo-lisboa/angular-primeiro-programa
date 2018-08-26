@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import {Component, OnInit, Input, ɵstringify} from '@angular/core';
 import {ArticleData} from '../articleData/ArticleData';
 
 @Component({
@@ -9,19 +9,9 @@ import {ArticleData} from '../articleData/ArticleData';
 export class NewArticleFormComponent implements OnInit {
   @Input()
   articles: ArticleData[];
-  title: string;
-  link: string;
 
-  onChangeTitle(txt: string) {
-    this.title = txt;
-  }
-
-  onChangeLink(txt: string) {
-    this.link = txt;
-  }
-
-  onButtonSaveClick() {
-    const newArticle = new ArticleData(this.link, this.title);
+  addNewArticle(title: HTMLInputElement, link: HTMLInputElement) {
+    const newArticle = new ArticleData(link.value, title.value);
     this.articles.push(newArticle);
   }
 

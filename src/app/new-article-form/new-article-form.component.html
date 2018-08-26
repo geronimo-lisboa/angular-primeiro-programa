@@ -1,3 +1,4 @@
+<!--
 <div>
   <div>
     <input placeholder="Titulo" (change)="onChangeTitle($event.target.value)">
@@ -7,5 +8,17 @@
   </div>
   <div>
     <button (click)="onButtonSaveClick()">Salvar</button>
+  </div>
+</div>
+-->
+<div>
+  <div>
+    <input placeholder="Titulo" #newTitle>
+  </div>
+  <div>
+    <input placeholder="Link" #newLink>
+  </div>
+  <div>
+    <button (click)="addNewArticle(newTitle, newLink)">Add</button>
   </div>
 </div>

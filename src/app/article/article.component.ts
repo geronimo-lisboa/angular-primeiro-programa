@@ -10,6 +10,14 @@ export class ArticleComponent implements OnInit {
   @Input()
   article: ArticleData;
 
+  onUpvoteClick() {
+    this.article.votos++;
+  }
+
+  onDownvoteClick() {
+    this.article.votos--;
+  }
+
   constructor() { }
 
   ngOnInit() {
