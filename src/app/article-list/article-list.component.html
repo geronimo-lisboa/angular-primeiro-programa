@@ -1,3 +1,8 @@
-<p>
-  article-list works!
-</p>
+<div>
+  <app-article
+    *ngFor="let currentArticle of articles"
+    [article]="currentArticle"
+  >
+
+  </app-article>
+</div>
