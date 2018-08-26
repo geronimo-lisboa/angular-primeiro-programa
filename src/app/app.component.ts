@@ -12,4 +12,8 @@ export class AppComponent {
   constructor() {
     this.articles = new Array<ArticleData>();
   }
+
+  articlesSortedByVotes(): ArticleData[] {
+    return this.articles.sort((a: ArticleData, b: ArticleData) => b.votos - a.votos);
+  }
 }
