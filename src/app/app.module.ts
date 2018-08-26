@@ -6,6 +6,8 @@ import { ArticleListComponent } from './article-list/article-list.component';
 import { ArticleComponent } from './article/article.component';
 import { NewArticleFormComponent } from './new-article-form/new-article-form.component';
 
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap'; // É do bootstrap
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -14,7 +16,8 @@ import { NewArticleFormComponent } from './new-article-form/new-article-form.com
     NewArticleFormComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
